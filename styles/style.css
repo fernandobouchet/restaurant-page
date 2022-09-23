@@ -1,0 +1,15 @@
+header {
+  text-align: center;
+}
+
+.nav-link {
+  cursor: pointer;
+  list-style: none;
+}
+
+#nav-ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
