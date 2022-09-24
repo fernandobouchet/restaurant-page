@@ -2,6 +2,7 @@ const navLinks = document.querySelectorAll('.nav-link');
 const darkModeToggle = document.querySelector('#toggle');
 const formCheck = document.getElementById('form-check');
 const radios = document.querySelectorAll('.radio');
+const menuCards = document.querySelectorAll('.platos-link');
 
 const switchMode = () => {
   darkModeToggle.classList.toggle('toggle-light');
@@ -10,20 +11,38 @@ const switchMode = () => {
 
 darkModeToggle.addEventListener('click', switchMode);
 
+function redireccionarASeccion(link) {
+  if (link.id === 'card-ejecutivo') {
+    return 'tabla-ejecutivo';
+  } else if (link.id === 'card-gourmet') {
+    return 'tabla-gourmet';
+  } else if (link.id === 'card-minutas') {
+    return 'tabla-minutas';
+  } else {
+    return 'tabla-bebidas';
+  }
+}
+
 function redireccionarAPagina(link) {
-  console.log(link);
   if (link.id === 'menu-link') {
     window.location.href = '/menu.html';
-  } else if (link.id === 'platos-link') {
-    window.location.href = '/detalle.html';
   } else if (link.id === 'contacto-link') {
     window.location.href = '/contacto.html';
+  } else if (link.classList.contains('platos-link')) {
+    const section = redireccionarASeccion(link);
+    window.location.href = `/detalle.html#${section}`;
   } else {
     window.location.href = '/index.html';
   }
 }
 
 navLinks.forEach((link) =>
+  link.addEventListener('click', () => {
+    redireccionarAPagina(link);
+  })
+);
+
+menuCards.forEach((link) =>
   link.addEventListener('click', () => {
     redireccionarAPagina(link);
   })

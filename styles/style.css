@@ -237,6 +237,28 @@ footer {
   transform: scale(1.05);
 }
 
+#tabla-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: auto;
+}
+
+table {
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+th {
+  text-align: center;
+  padding: 1rem;
+}
+
+td {
+  padding: 1rem;
+  width: 100%;
+}
+
 @media (max-width: 767px) {
   #nav-ul {
     gap: 0;
