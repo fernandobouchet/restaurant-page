@@ -5,9 +5,18 @@ const radios = document.querySelectorAll('.radio');
 const menuCards = document.querySelectorAll('.platos-link');
 const botonVolver = document.getElementById('boton-volver');
 
+window.onload = () => {
+  !localStorage.getItem('darkMode') && localStorage.setItem('darkMode', true);
+};
+
 const switchMode = () => {
-  darkModeToggle.classList.toggle('toggle-light');
-  document.body.classList.toggle('light-mode');
+  localStorage.getItem('darkMode') === 'false'
+    ? localStorage.setItem('darkMode', true)
+    : localStorage.setItem('darkMode', false);
+  document.documentElement.setAttribute(
+    'darkMode',
+    window.localStorage.getItem('darkMode')
+  );
 };
 
 darkModeToggle.addEventListener('click', switchMode);
