@@ -6,7 +6,7 @@ const menuCards = document.querySelectorAll('.platos-link');
 const botonVolver = document.getElementById('boton-volver');
 
 window.onload = () => {
-  !localStorage.getItem('darkMode') && localStorage.setItem('darkMode', true);
+  !localStorage.getItem('darkMode') && localStorage.setItem('darkMode', false);
 };
 
 const switchMode = () => {
