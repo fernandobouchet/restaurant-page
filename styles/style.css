@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel&family=Ms+Madi&display=swap');
+
+html {
+  font-size: 16px;
+}
+
 body {
   color: var(--font-color);
   background-color: var(--bg-color);
+  font-family: 'Martel', serif;
+}
+
+h1 {
+  font-family: 'Ms Madi', cursive;
+  font-size: calc(2.5rem + 1vw);
 }
 
 :root {
@@ -13,7 +25,8 @@ body {
   --font-color: #3d3d3d;
 }
 
-header {
+h1,
+h4 {
   text-align: center;
 }
 
@@ -44,4 +57,105 @@ header {
 
 .toggle-light {
   background: url('../assets/icons/sun.svg') no-repeat center !important;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#mapa-container {
+  text-align: center;
+}
+#mapa {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: auto;
+  cursor: zoom-in;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 10px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 1rem;
+  font-size: calc(0.8rem + 0.1vw);
+  align-items: center;
+}
+
+#footer-list > ul > li {
+  list-style: none;
+}
+
+#footer-list > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+#social-container > ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 1rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+#social-list {
+  text-align: center;
+}
+
+.social-icon {
+  width: 100%;
+  max-width: 48px;
+  height: auto;
+}
+
+#envios-container {
+  text-align: center;
+}
+
+#pedidos-icon {
+  width: 100%;
+  max-width: 96px;
+  height: auto;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.social-icon,
+#pedidos-icon {
+  transition: transform ease-out 500ms;
+}
+
+.social-icon:hover,
+#pedidos-icon:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  #nav-ul {
+    gap: 0;
+  }
+
+  #mapa {
+    max-width: 300px;
+  }
+  .social-icon {
+    max-width: 36px;
+  }
+  #pedidos-icon {
+    max-width: 72px;
+  }
 }
