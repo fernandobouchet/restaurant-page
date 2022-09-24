@@ -3,6 +3,7 @@ const darkModeToggle = document.querySelector('#toggle');
 const formCheck = document.getElementById('form-check');
 const radios = document.querySelectorAll('.radio');
 const menuCards = document.querySelectorAll('.platos-link');
+const botonVolver = document.getElementById('boton-volver');
 
 const switchMode = () => {
   darkModeToggle.classList.toggle('toggle-light');
@@ -60,3 +61,8 @@ formCheck &&
 function showAlert() {
   alert('Mensaje enviado');
 }
+
+botonVolver &&
+  botonVolver.addEventListener('click', () => {
+    history.back();
+  });

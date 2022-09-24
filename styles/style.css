@@ -259,6 +259,11 @@ td {
   width: 100%;
 }
 
+.volver-boton-container {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 767px) {
   #nav-ul {
     gap: 0;
