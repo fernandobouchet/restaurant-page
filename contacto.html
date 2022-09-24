@@ -23,7 +23,7 @@
   <body>
     <header>
       <div id="toggle-container"><button id="toggle"></button></div>
-      <h1>Contacto</h1>
+      <h1>Ciu Restaurant</h1>
     </header>
     <nav>
       <ul id="nav-ul">
@@ -33,6 +33,95 @@
         <li class="nav-link" id="contacto-link">Contacto</li>
       </ul>
     </nav>
+    <main id="form-container" class="container">
+      <h2>Contacto</h2>
+      <form onsubmit="showAlert()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input
+            type="name"
+            class="form-control"
+            id="name-control"
+            placeholder="Ingrese aquí su nombre"
+            required
+            autofocus
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Correo</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Ingrese aquí su correo electrónico"
+            required
+          />
+        </div>
+        <div class="form-check">
+          <input
+            id="form-check"
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckIndeterminate"
+          />
+          <label class="form-check-label" for="flexCheckIndeterminate">
+            Calificar atención
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="radio form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+            disabled
+          />
+          <label class="form-check-label" for="flexRadioDefault1"> Mala </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="radio form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            disabled
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            Regular
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="radio form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            disabled
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            Buena
+          </label>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Comentarios</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            placeholder="Ingrese aquí sus comentarios"
+            required
+          ></textarea>
+          <div id="submit-button">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </main>
     <hr />
     <footer>
       <h4>Contactanos</h4>

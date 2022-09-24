@@ -195,3 +195,16 @@ footer {
     max-width: 72px;
   }
 }
+#form-container {
+  max-width: 500px;
+}
+
+#form-container > h2 {
+  text-align: center;
+}
+
+#submit-button {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+}

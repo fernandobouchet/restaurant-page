@@ -1,5 +1,7 @@
 const navLinks = document.querySelectorAll('.nav-link');
 const darkModeToggle = document.querySelector('#toggle');
+const formCheck = document.getElementById('form-check');
+const radios = document.querySelectorAll('.radio');
 
 const switchMode = () => {
   darkModeToggle.classList.toggle('toggle-light');
@@ -26,3 +28,16 @@ navLinks.forEach((link) =>
     redireccionarAPagina(link);
   })
 );
+
+formCheck &&
+  formCheck.addEventListener('click', () => {
+    radios.forEach((radio) =>
+      radio.hasAttribute('disabled')
+        ? radio.removeAttribute('disabled')
+        : radio.setAttribute('disabled', '0')
+    );
+  });
+
+function showAlert() {
+  alert('Mensaje enviado');
+}
