@@ -34,7 +34,7 @@ formCheck &&
     radios.forEach((radio) =>
       radio.hasAttribute('disabled')
         ? radio.removeAttribute('disabled')
-        : radio.setAttribute('disabled', '0')
+        : radio.setAttribute('disabled', '')
     );
   });
 
