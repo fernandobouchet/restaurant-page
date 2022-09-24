@@ -11,4 +11,4 @@ Projecto de pagina web de restaurante realizado como parte del 1er parcial de la
 
 ## Screenshots
 
-![App Screenshot]()
+![App Screenshot](https://github.com/fernandobouchet/restaurant-page/blob/main/project_preview.jpg?raw=true)
