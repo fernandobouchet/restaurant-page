@@ -1,3 +1,18 @@
+body {
+  color: var(--font-color);
+  background-color: var(--bg-color);
+}
+
+:root {
+  --bg-color: #171923;
+  --font-color: #c5cddb;
+}
+
+.light-mode {
+  --bg-color: #e8e6dc;
+  --font-color: #3d3d3d;
+}
+
 header {
   text-align: center;
 }
@@ -5,6 +20,7 @@ header {
 .nav-link {
   cursor: pointer;
   list-style: none;
+  color: var(--font-color);
 }
 
 #nav-ul {
@@ -12,4 +28,20 @@ header {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+#toggle-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#toggle {
+  background-size: contain;
+  border: none;
+  background: url('../assets/icons/moon.svg') no-repeat center;
+  padding: 1.2rem;
+}
+
+.toggle-light {
+  background: url('../assets/icons/sun.svg') no-repeat center !important;
 }

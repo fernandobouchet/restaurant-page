@@ -1,4 +1,12 @@
 const navLinks = document.querySelectorAll('.nav-link');
+const darkModeToggle = document.querySelector('#toggle');
+
+const switchMode = () => {
+  darkModeToggle.classList.toggle('toggle-light');
+  document.body.classList.toggle('light-mode');
+};
+
+darkModeToggle.addEventListener('click', switchMode);
 
 function redireccionarAPagina(link) {
   console.log(link);
